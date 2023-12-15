@@ -35,7 +35,12 @@ function Home (){
 
                 </Link>
                 
+                <Link to='sign in'>
+
                 <Button style={buttonStyle} variant='secondary'>Sign In</Button>
+                
+                </Link>
+                
             </Form>
             
         </div>
