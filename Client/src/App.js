@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CreateAccount from './Components/SignUp';
 import SignIn from './Components/SignIn';
 import HomePage from './Components/HomePage';
+import Cart from './Components/Cart';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/create_account' element={<CreateAccount/>}/>
         <Route path='/sign in' element={<SignIn/>}/>
         <Route path='/menu' element={<HomePage />}/>
+        <Route path='/cart' element={<Cart />}/>
 
       </Routes>
 

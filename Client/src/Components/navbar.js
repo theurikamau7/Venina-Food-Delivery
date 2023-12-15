@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import * as TfiIcons from "react-icons/tfi";
 import * as MdIcons from "react-icons/md";
 import SidebarData from './sidebar';
-
+import './Homepage.css';
 function NavBar() {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
