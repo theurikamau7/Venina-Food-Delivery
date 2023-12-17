@@ -1,25 +1,26 @@
-import React, {useState} from 'react'
-import { CgSearch } from "react-icons/cg";
-import './Homepage.css';
+import React, { useState } from 'react';
+import { Form } from 'react-bootstrap';
 
 function Searchbar() {
-    const [Input, setInput] =useState('');
-    const handleChange =(value)=>{
-        setInput(value)
-    }
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
   return (
-    <div className='searchbar'>
-        <div className='input-wrapper'>
-        <CgSearch id='search-icon'/>
-        <input placeholder='Type to search' 
-        value={Input} 
-        onChange={((e)=> handleChange(e.target.value))}/>
-        </div>
-        <div>Search Results</div>
-      
+    <div>
+      <Form>
+        <Form.Control
+          type="text"
+          placeholder="Search Italian Foods..."
+          value={searchTerm}
+          onChange={handleChange}
+        />
+      </Form>
+
     </div>
-  )
+  );
 }
 
 export default Searchbar;

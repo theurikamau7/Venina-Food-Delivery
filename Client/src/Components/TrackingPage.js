@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import './Homepage.css';
-import NavBar from './navbar'; // Import the NavBar component
+import './Homepage.css'; 
+import NavBar from './navbar';  
 
 function TrackingPage() {
     const [currentStep, setCurrentStep] = useState(1);
-    const estimatedTime = 60; // Change this to your estimated time in minutes
+    const estimatedTime = 60; 
     const [elapsedTime, setElapsedTime] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setElapsedTime((prevTime) => prevTime + 1);
-        }, 60000); // Update elapsed time every minute
+        }, 60000); 
 
         return () => clearInterval(interval);
     }, []);
@@ -18,7 +18,7 @@ function TrackingPage() {
     return (
         <div>
             <div className="navbar">
-                <NavBar /> {/* Include the NavBar component */}
+                <NavBar /> 
             </div>
             <div className="track-order-container">
                 <div className="steps-container">

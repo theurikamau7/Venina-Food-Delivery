@@ -1,50 +1,58 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button, Form} from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+function SignInUp() {
+  const signUpButtonStyle = {
+    width: '300px',
+    margin: '0 auto',
+    display: 'block',
+    marginTop: '40px',
+    marginBottom: '20px',
+    backgroundColor: '#800000', // Maroon color
+    border: 'none'
+  };
 
-function Home (){
+  const signInButtonStyle = {
+    width: '300px',
+    margin: '0 auto',
+    display: 'block',
+    marginBottom: '40px',
+    backgroundColor: '#556B2F', // Olive Green color
+    border: 'none'
+  };
 
+  const formstyle = {
+    backgroundColor: '#ABD6DFFF',
+    padding: '40px',
+    borderRadius: '8px',
+    margin: '200px auto',
+    width: '60%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  };
 
-    const buttonStyle = {
-        width:'300px',
-        margin:'0 auto',
-        display:'block',
-        marginTop:'40px',
-        marginBottom:'40px'
-    }
+  return (
+    <div className='text-center'>
+      <Form style={formstyle}>
+        <Link to='/create_account'>
+          <Button style={signUpButtonStyle} variant='primary'>
+            Sign Up
+          </Button>
+        </Link>
 
-    const formstyle = {
-        backgroundColor:'#ABD6DFFF',
-        padding:'40px',
-        borderRadius:'8px',
-        margin: '200px auto',
-        width:'60%',
-        display:'flex',
-        flexDirection:'column',
-        alignItems:'center'
-    }
-
-    return(
-        <div className='text-center'>
-            <Form style={formstyle}>
-                <Link to='create_account'>
-
-                <Button style={buttonStyle} variant='primary'>Sign Up</Button>
-
-                </Link>
-                
-                <Link to='sign in'>
-
-                <Button style={buttonStyle} variant='secondary'>Sign In</Button>
-                
-                </Link>
-                
-            </Form>
-            
-        </div>
-    )
+        <Link to='/sign_in'>
+          <Button style={signInButtonStyle} variant='secondary'>
+            Sign In
+          </Button>
+        </Link>
+      </Form>
+    </div>
+  );
 }
 
-export default Home
+export default SignInUp;
+
+

@@ -1,0 +1,125 @@
+{
+    "italianFoods": [
+      {
+        "id": 1,
+        "name": "Pizza Margherita",
+        "image": "https://example.com/pizza-margherita.jpg",
+        "description": "Classic Italian pizza with tomato, mozzarella, and basil."
+      },
+      {
+        "id": 2,
+        "name": "Spaghetti Bolognese",
+        "image": "https://example.com/spaghetti-bolognese.jpg",
+        "description": "Spaghetti pasta with a rich meat-based Bolognese sauce."
+      },
+      {
+        "id": 3,
+        "name": "Lasagna",
+        "image": "https://example.com/lasagna.jpg",
+        "description": "Layered pasta dish with meat, cheese, and tomato sauce."
+      },
+      {
+        "id": 4,
+        "name": "Ravioli",
+        "image": "https://example.com/ravioli.jpg",
+        "description": "Pasta filled with meat, cheese, or vegetables, typically served in broth or with a sauce."
+      },
+      {
+        "id": 5,
+        "name": "Tiramisu",
+        "image": "https://example.com/tiramisu.jpg",
+        "description": "Italian dessert consisting of layers of coffee-soaked ladyfingers and mascarpone cheese."
+      },
+      {
+        "id": 6,
+        "name": "Caprese Salad",
+        "image": "https://example.com/caprese-salad.jpg",
+        "description": "Simple Italian salad made with fresh tomatoes, mozzarella, basil, and olive oil."
+      },
+      {
+        "id": 7,
+        "name": "Gnocchi",
+        "image": "https://example.com/gnocchi.jpg",
+        "description": "Soft dough dumplings made from potatoes, semolina, or flour."
+      },
+      {
+        "id": 8,
+        "name": "Calzone",
+        "image": "https://example.com/calzone.jpg",
+        "description": "Folded pizza filled with ingredients such as ricotta, mozzarella, and tomato sauce."
+      },
+      {
+        "id": 9,
+        "name": "Minestrone Soup",
+        "image": "https://example.com/minestrone-soup.jpg",
+        "description": "Vegetable soup with pasta or rice, often containing tomatoes, beans, and various vegetables."
+      },
+      {
+        "id": 10,
+        "name": "Osso Buco",
+        "image": "https://example.com/osso-buco.jpg",
+        "description": "Milanese specialty of braised veal shanks in a flavorful broth."
+      },
+      {
+        "id": 11,
+        "name": "Fettuccine Alfredo",
+        "image": "https://example.com/fettuccine-alfredo.jpg",
+        "description": "Pasta noodles in a creamy sauce made with butter and Parmesan cheese."
+      },
+      {
+        "id": 12,
+        "name": "Arancini",
+        "image": "https://example.com/arancini.jpg",
+        "description": "Deep-fried rice balls stuffed with meat, cheese, or vegetables."
+      },
+      {
+        "id": 13,
+        "name": "Eggplant Parmesan",
+        "image": "https://example.com/eggplant-parmesan.jpg",
+        "description": "Sliced and breaded eggplant, layered with marinara sauce and cheese, then baked."
+      },
+      {
+        "id": 14,
+        "name": "Bruschetta",
+        "image": "https://example.com/bruschetta.jpg",
+        "description": "Toasted bread topped with diced tomatoes, garlic, and basil."
+      },
+      {
+        "id": 15,
+        "name": "Panna Cotta",
+        "image": "https://example.com/panna-cotta.jpg",
+        "description": "Italian dessert made by simmering together cream, milk, and sugar, mixing with gelatin, and letting it cool until set."
+      },
+      {
+        "id": 16,
+        "name": "Cannoli",
+        "image": "https://example.com/cannoli.jpg",
+        "description": "Italian pastry dessert with a tube-shaped shell filled with a sweet, creamy filling containing ricotta."
+      },
+      {
+        "id": 17,
+        "name": "Veal Marsala",
+        "image": "https://example.com/veal-marsala.jpg",
+        "description": "Veal cutlets in a rich Marsala wine and mushroom sauce."
+      },
+      {
+        "id": 18,
+        "name": "Amatriciana Pasta",
+        "image": "https://example.com/amatriciana-pasta.jpg",
+        "description": "Pasta dish featuring tomatoes, guanciale (or pancetta), Pecorino cheese, and sometimes onions or garlic."
+      },
+      {
+        "id": 19,
+        "name": "Limoncello",
+        "image": "https://example.com/limoncello.jpg",
+        "description": "Italian lemon-flavored liqueur, typically served as a digestif."
+      },
+      {
+        "id": 20,
+        "name": "Cacio e Pepe",
+        "image": "https://example.com/cacio-e-pepe.jpg",
+        "description": "Simple Roman pasta dish featuring Pecorino Romano cheese and black pepper."
+      }
+    ]
+  }
+  
