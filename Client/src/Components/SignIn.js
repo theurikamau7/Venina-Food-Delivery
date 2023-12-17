@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form } from "react-bootstrap";
+import {useNavigate} from 'react-router-dom'
 
 function SignIn(){
     const [formData, setFormData] = useState({
@@ -14,6 +15,13 @@ function SignIn(){
         setFormData({...formData, [key]: value});
     }
 
+    const navigate = useNavigate()
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        navigate('/menu')
+
+    }
     const inputStyle = {
         width:'100%',
         borderRadius:'15px',
@@ -50,7 +58,7 @@ function SignIn(){
                     <Form.Control style={inputStyle} type="password" placeholder="Password" id="password" value={formData.password} onChange={handleChange}></Form.Control>
                 </Form.Group>
 
-                <Button type="submit" style={buttonStyle}>
+                <Button type="submit" style={buttonStyle} onClick={handleSubmit}>
                     Sign In
                 </Button>
             </Form>
