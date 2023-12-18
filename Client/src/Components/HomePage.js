@@ -21,7 +21,7 @@ function HomePage() {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3001/italianFoods')
+    fetch('http://127.0.0.1:5000/foods')
       .then(res => res.json())
       .then((data) => {
         console.log(data);

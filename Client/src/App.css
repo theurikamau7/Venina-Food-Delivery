@@ -250,4 +250,66 @@
     background-color: #ee7214;
     transition: 0.7s;
   }
- 
+
+
+.payment-container {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.other-option {
+  display: flex;
+  align-items: center;
+}
+
+.other-option img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.delivery-address-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.form-label {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  color: maroon; /* Maroon text color */
+  font-weight: 300; /* Thin font weight */
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid maroon; /* Thin maroon border */
+  color: black; /* Black text color */
+  font-weight: 300; /* Thin font weight */
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pay-later {
+  background-color: #ee7214; /* Adjusted color for Pay Later button */
+  color: white; /* White text color for Pay Later button */
+}
