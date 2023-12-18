@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import NavBar from './navbar';
+import { FiShoppingCart } from "react-icons/fi";
 import '../App.css';
 
 function HomePage() {
@@ -11,7 +13,6 @@ function HomePage() {
   };
 
   const handleSearch = () => {
-    // Filter Italian foods based on the search query
     const filteredFoods = italianFoods.filter(food =>
       food.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
@@ -51,6 +52,13 @@ function HomePage() {
             </div>
           ))}
         </div>
+      </div>
+      <div className='cart'>
+        <Link to='/MyOrder' className='cart-link'>
+          <FiShoppingCart />
+        </Link> 
+
+        <span className='cart-quantity'>4</span>
       </div>
     </div>
   );

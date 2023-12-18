@@ -193,16 +193,17 @@
     text-decoration: underline;
 }
 .button{
-    padding: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 20px;
-    border-color: #ee7214;
-    margin-top: 20px;
+    background-color: #ee7214;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
-    padding:15px;
-    min-height:30px; 
-    min-width: 120px;
 }
 .search-button:hover {
     background-color: #ee7214;
@@ -219,3 +220,36 @@
 	align-items: stretch;
     padding: 10px;
 }
+.cart{
+    position: fixed;
+    top: 20px; 
+    right: 20px; 
+    font-size: 24px;
+    background-color: #ee7214;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer; 
+}
+.cart-link {
+    color: black; 
+    text-decoration: none; 
+  }
+  account-page{
+    text-align: center;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50.4% 50.5%, rgb(251, 32, 86) 0%, rgb(135, 2, 35) 90%);
+    }
+    .form-container{
+    padding: 7rem;
+    border: 2px solid white;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px;
+    background: rgba(168, 54, 65, 0.51);
+    }
+    .form-container, .login-form, .register-form {
+    display: flex;
+    flex-direction: column;
+    }
