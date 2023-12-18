@@ -8,7 +8,8 @@ import HomePage from './Components/HomePage';
 import MyOrder from './Components/MyOrder';
 import TrackingPage from './Components/TrackingPage';
 import PaymentPage from './Components/PaymentPage';
-import LandingPage from './Components/LandingPage'; // Import the new component
+import LandingPage from './Components/LandingPage'; 
+import './App.css'
 
 function App() {
   return (

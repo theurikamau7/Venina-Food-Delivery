@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import NavBar from './navbar';
-import './Homepage.css';
 
 function PaymentPage() {
     

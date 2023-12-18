@@ -1,26 +1,28 @@
-import React, { useState } from 'react';
-import { Form } from 'react-bootstrap';
+import React, { useState } from "react";
+import "../App.css"
 
-function Searchbar() {
-  const [searchTerm, setSearchTerm] = useState('');
+function SearchBar({ onSearch }) {
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value);
+  const handleInputChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleSearch = () => {
+    onSearch(searchQuery);
   };
 
   return (
-    <div>
-      <Form>
-        <Form.Control
-          type="text"
-          placeholder="Search Italian Foods..."
-          value={searchTerm}
-          onChange={handleChange}
-        />
-      </Form>
-
+    <div className="search">
+      <input 
+        type="text"
+        placeholder="Search Italian foods..."
+        value={searchQuery}
+        onChange={handleInputChange}
+      />
+      <button onClick={handleSearch}>Search</button>
     </div>
   );
 }
 
-export default Searchbar;
+export default SearchBar;

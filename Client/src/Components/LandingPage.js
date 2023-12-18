@@ -1,8 +1,8 @@
 // LandingPage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap'; // Correct import statement for Button from react-bootstrap
-import './LandingPage.css';
+import { Button } from 'react-bootstrap'; 
+import '../App.css';
 
 function LandingPage() {
   return (
