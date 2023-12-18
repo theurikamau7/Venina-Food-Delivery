@@ -1,3 +1,4 @@
+// HomePage.js
 import React, { useState, useEffect } from 'react';
 import NavBar from './navbar';
 import { FiShoppingCart } from 'react-icons/fi';
@@ -54,18 +55,16 @@ function HomePage() {
               <img className='images' src={food.image} alt={food.name} />
               <h3>{food.name}</h3>
               <p>{food.description}</p>
-              <Link to='./cart'>
               <button className='add-to-cart-button' onClick={() => handleAddToCart(food)}>
                 Order
                 <FiShoppingCart />
               </button>
-              </Link>
             </div>
           ))}
         </div>
       </div>
       <div className='cart'>
-        <Link to='./cart' className='cart-link'>
+        <Link to='/cart' className='cart-link'>
           <FiShoppingCart />Cart({cart.length})
         </Link>
       </div>

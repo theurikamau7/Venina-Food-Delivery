@@ -313,3 +313,96 @@
   background-color: #ee7214; /* Adjusted color for Pay Later button */
   color: white; /* White text color for Pay Later button */
 }
+
+/*..trackingpage..*/
+.track-order-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.step {
+  padding: 10px;
+  border: 2px solid #ee7214;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #ee7214;
+}
+
+.step.active {
+  background-color: #ee7214;
+  color: #fff;
+}
+
+.estimate-bar {
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.estimate-progress {
+  height: 100%;
+  background-color: #ee7214;
+}
+
+.estimated-time {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.order-arrived-button {
+  background-color: #ee7214;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.order-arrived-button:hover {
+  background-color: #ff9533;
+}
+
+.order-status-form {
+  max-width: 400px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #ee7214;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ff9533;
+} 
