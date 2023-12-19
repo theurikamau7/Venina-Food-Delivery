@@ -1,32 +1,10 @@
 // MyOrder.js
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function MyOrder() {
-  const [orderItems, setOrderItems] = useState([]);
-  const [totalAmount, setTotalAmount] = useState(0);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // Use fetch to load the JSON data
-        const response = await fetch('/db.json'); // Adjust the path as needed
-        const data = await response.json();
-
-        // Simulating data from the database
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        setOrderItems(data.italianFoods);
-
-        // Calculate total amount
-        const total = data.italianFoods.reduce((acc, item) => acc + item.quantity * item.price, 0);
-        setTotalAmount(total);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const location = useLocation();
+  const cart = location.state ? location.state.cart : [];
 
   return (
     <div>
@@ -37,7 +15,7 @@ function MyOrder() {
 
       {/* Order items */}
       <div className="order-list">
-        {orderItems.map(item => (
+        {cart.map(item => (
           <div key={item.id} className="order-item">
             <img src={item.image} alt={item.name} className="item-image" />
             <div className="item-details">
@@ -54,7 +32,6 @@ function MyOrder() {
 
       {/* Total amount and buttons */}
       <div className="order-summary">
-        <div className="total-amount">Total Amount: ${totalAmount}</div>
         <div className="payment-options">
           <Link to="/payment">
             <button className="pay-now">Pay Now</button>
@@ -69,3 +46,5 @@ function MyOrder() {
 }
 
 export default MyOrder;
+
+

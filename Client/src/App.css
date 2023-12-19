@@ -1,12 +1,27 @@
-
-.landing-page{
-    height: 100vh;
-    width: 100%;
-    background: url(https://img.freepik.com/free-photo/flat-lay-plate-mussels-pasta-wine-glass-with-copyspace_23-2148234913.jpg?w=1380&t=st=1702899774~exp=1702900374~hmac=04a1290e0664c4bf7e0a4efe3711975777c10445dfc09582ffaadd4264273073);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.landing-page {
+  height: 100vh;
+  width: 100%;
+  background: url('https://img.freepik.com/free-photo/flat-lay-plate-mussels-pasta-wine-glass-with-copyspace_23-2148234913.jpg?w=1380&t=st=1702899774~exp=1702900374~hmac=04a1290e0664c4bf7e0a4efe3711975777c10445dfc09582ffaadd4264273073') center/cover no-repeat;
+  animation: slideBackground 90s infinite linear; /* Adjusted duration to 90s for 30 seconds per image */
 }
+
+@keyframes slideBackground {
+  0% {
+    background-image: url('https://img.freepik.com/free-photo/flat-lay-plate-mussels-pasta-wine-glass-with-copyspace_23-2148234913.jpg?w=1380&t=st=1702899774~exp=1702900374~hmac=04a1290e0664c4bf7e0a4efe3711975777c10445dfc09582ffaadd4264273073');
+    background-position: center;
+  }
+  33.33% {
+    background-image: url('https://as1.ftcdn.net/v2/jpg/02/90/74/06/1000_F_290740648_6FYCmnWC7KNuzBt3ZQ3lVniKCxF8MBDJ.jpg');
+  }
+  66.66% {
+    background-image: url('https://img.freepik.com/premium-photo/frame-fettuccine-with-ingredients-cooking-italian-pasta-dark_118925-2466.jpg?w=740');
+  }
+  100% {
+    background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2lzMTYwNjItaW1hZ2Uta3d2eWZrd3IuanBn.jpg');
+    background-position: right; /* Move out to the right */
+  }
+}
+
 .logo{
     display: flex;
     align-items: center;

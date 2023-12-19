@@ -22,6 +22,7 @@ function HomePage() {
   };
 
   useEffect(() => {
+    // Assuming the API returns objects with the necessary properties
     fetch('http://127.0.0.1:5000/foods')
       .then(res => res.json())
       .then((data) => {
@@ -64,7 +65,7 @@ function HomePage() {
         </div>
       </div>
       <div className='cart'>
-        <Link to='/cart' className='cart-link'>
+        <Link to={{ pathname: '/cart', state: { cart: cart } }} className='cart-link'>
           <FiShoppingCart />Cart({cart.length})
         </Link>
       </div>
