@@ -59,8 +59,8 @@ function App() {
         <Route path='/create_account' element={<CreateAccount />} />
         <Route path='/sign_in_up' element={<SignInUp />} />
         <Route path='/sign_in' element={<SignIn />} />
-        <Route path='/menu' element={<HomePage handleAddToCart={handleAddToCart} searchQuery={searchQuery} setSearchQuery={setSearchQuery} italianFoods={italianFoods} handleSearch = {handleSearch}/>} />
-        <Route path='/cart' element={<MyOrder cart={cart} />} />
+        <Route path='/menu' element={<HomePage cart={cart} handleAddToCart={handleAddToCart} searchQuery={searchQuery} setSearchQuery={setSearchQuery} italianFoods={italianFoods} handleSearch = {handleSearch}/>} />
+        <Route path='/cart' element={<MyOrder setCart={setCart} cart={cart} />} />
         <Route path='/tracking' element={<TrackingPage />} />
         <Route path='/payment' element={<PaymentPage />} />
       </Routes>

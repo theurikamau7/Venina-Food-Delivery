@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-function MyOrder({ cart }) {
+function MyOrder({ cart, setCart }) {
 
   return (
     <div className='selected-cart'>
@@ -30,7 +30,37 @@ function MyOrder({ cart }) {
                     <td>{item.product.name}</td>
                     <td>{item.product.description}</td>
                     <td>{item.price}</td>
-                    <td>{item.quantity}</td>
+                    <td>
+
+                      <button onClick={() => {
+                        setCart((prevdata) => {
+                          const updatedQuantity = prevdata.map(
+                            (prevItem) => prevItem.product.id == item.product.id ? {
+                              ...prevItem, quantity: item.quantity + 1
+                            } : prevItem
+                          )
+                          return updatedQuantity
+                        })
+                      }}>
+                        +
+                      </button>
+
+                      
+                      {item.quantity}
+
+                      <button onClick={() => {
+                        setCart((prevdata) => {
+                          const updatedQuantity = prevdata.map(
+                            (prevItem) => prevItem.product.id == item.product.id ? {
+                              ...prevItem, quantity:Math.max(item.quantity - 1, 0)
+                            } : prevItem
+                          )
+                          return updatedQuantity
+                        })
+                      }}>
+                        -
+                      </button>
+                    </td>
                     <td>
                       <button>
                         Remove Item

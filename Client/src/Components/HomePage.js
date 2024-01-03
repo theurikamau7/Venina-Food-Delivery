@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import MyOrder from './MyOrder';
 
-function HomePage({handleAddToCart, handleSearch, italianFoods, searchQuery, setSearchQuery}) {
+function HomePage({cart, handleAddToCart, handleSearch, italianFoods, searchQuery, setSearchQuery}) {
   
 
   const handleInputChange = (e) => {
@@ -45,11 +45,8 @@ function HomePage({handleAddToCart, handleSearch, italianFoods, searchQuery, set
         </div>
       </div>
       <div className='cart'>
-        {/* <Link to={{ pathname: '/cart', state: { cart: cart } }} className='cart-link'>
-          <FiShoppingCart />Cart({cart.length})
-        </Link> */}
         <Link to="/cart">
-          <FiShoppingCart />
+          <FiShoppingCart /> Cart({cart.length})
         </Link>
 
 
