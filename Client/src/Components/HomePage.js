@@ -4,36 +4,16 @@ import NavBar from './navbar';
 import { FiShoppingCart } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import MyOrder from './MyOrder';
 
-function HomePage() {
-  const [italianFoods, setItalianFoods] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [cart, setCart] = useState([]);
+function HomePage({handleAddToCart, handleSearch, italianFoods, searchQuery, setSearchQuery}) {
+  
 
   const handleInputChange = (e) => {
     setSearchQuery(e.target.value);
   };
 
-  const handleSearch = () => {
-    const filteredFoods = italianFoods.filter(food =>
-      food.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setItalianFoods(filteredFoods);
-  };
 
-  useEffect(() => {
-    // Assuming the API returns objects with the necessary properties
-    fetch('http://127.0.0.1:5000/foods')
-      .then(res => res.json())
-      .then((data) => {
-        console.log(data);
-        setItalianFoods(data);
-      });
-  }, []);
-
-  const handleAddToCart = (food) => {
-    setCart([...cart, food]);
-  };
 
   return (
     <div className='home-container'>
@@ -65,9 +45,14 @@ function HomePage() {
         </div>
       </div>
       <div className='cart'>
-        <Link to={{ pathname: '/cart', state: { cart: cart } }} className='cart-link'>
+        {/* <Link to={{ pathname: '/cart', state: { cart: cart } }} className='cart-link'>
           <FiShoppingCart />Cart({cart.length})
+        </Link> */}
+        <Link to="/cart">
+          <FiShoppingCart />
         </Link>
+
+
       </div>
     </div>
   );

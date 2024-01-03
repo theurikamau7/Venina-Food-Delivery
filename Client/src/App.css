@@ -421,3 +421,41 @@ button {
 button:hover {
   background-color: #ff9533;
 } 
+
+
+.table-container{
+  width: 60%;
+  margin: auto;
+}
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, td{
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+.table th{
+  background-color: #3a5b3b;
+}
+
+.table td{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.order-summary{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50%;
+}
+
+.table-img{
+  width: 125px;
+  height: 125px;
+}
+
