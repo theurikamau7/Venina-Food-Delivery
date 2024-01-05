@@ -36,6 +36,7 @@ function HomePage({cart, handleAddToCart, handleSearch, italianFoods, searchQuer
               <img className='images' src={food.image} alt={food.name} />
               <h3>{food.name}</h3>
               <p>{food.description}</p>
+              <p>Ksh: {food.price}</p>
               <button className='add-to-cart-button' onClick={() => handleAddToCart(food)}>
                 Order
                 <FiShoppingCart />

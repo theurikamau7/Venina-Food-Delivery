@@ -19,9 +19,10 @@ class Food(db.Model):
     name = db.Column(db.String, nullable = False)
     image = db.Column(db.String, nullable = False)
     description = db.Column(db.String, nullable = False)
+    price = db.Column(db.Integer, nullable = False)
 
     def __repr__(self):
-        return f'Name: {self.name}'
+        return f"Food(id={self.id}, name='{self.name}', image='{self.image}', description='{self.description}', price={self.price})"
     
 class User(db.Model):
 
