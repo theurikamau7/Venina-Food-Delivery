@@ -266,12 +266,13 @@
     transition: 0.7s;
   }
 
-
-.payment-container {
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
+  .payment-container {
+    text-align: center;
+    width: 100%;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+  }
+  
 
 .payment-options {
   display: flex;
@@ -472,4 +473,24 @@ button:hover {
 
 .amount{
   border: none;
+}
+
+
+.pay-now-button {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #ee7214;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: white;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pay-now-button:hover {
+  background-color: #ff9533;
+  transition: 0.7s;
 }

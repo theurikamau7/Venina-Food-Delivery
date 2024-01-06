@@ -172,12 +172,9 @@ const PaymentPage = () => {
         </div>
 
         <div className="buttons-container">
-          <button type="submit" className="button">
+        <button type="submit" className="button full-width">
             Pay Now
-          </button>
-          <button type="button" className="button pay-later">
-            Pay Later
-          </button>
+        </button>
         </div>
       </form>
     </div>

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './navbar';
 import '../App.css';
+import { useNavigate } from 'react-router-dom';
 
 function TrackingPage() {
+    const history = useNavigate();
     const estimatedTime = 5;
     const [elapsedTime, setElapsedTime] = useState(0);
 
@@ -22,11 +24,11 @@ function TrackingPage() {
     };
 
     const handleOrderArrived = () => {
-        // Handle logic for when the user clicks "Order Arrived" button
-        // You can update the order status or perform any other action
-        alert('Order has arrived!'); // For demonstration purposes, you can replace this with your logic
-    };
-
+        alert('Order has arrived!'); 
+        // Redirect to the /payment route
+        history('/payment');
+    };    
+    
     return (
         <div>
             <div className="navbar">
@@ -49,7 +51,6 @@ function TrackingPage() {
                 <div className="estimated-time">Estimated Time: {estimatedTime - elapsedTime} minutes</div>
                 {/* Add other tracking page content here */}
 
-                {/* "Order Arrived" button */}
                 <button className="order-arrived-button" onClick={handleOrderArrived}>
                     Order Arrived
                 </button>
