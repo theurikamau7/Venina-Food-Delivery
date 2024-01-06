@@ -40,6 +40,17 @@ function App() {
     }
   }
 
+  const totalAmount = () => {
+    let total = 0
+
+    for (const item of cart){
+      total += item.product.price * item.quantity
+    }
+    return total
+  }
+
+
+
 
   useEffect(() => {
     // Assuming the API returns objects with the necessary properties
@@ -60,7 +71,7 @@ function App() {
         <Route path='/sign_in_up' element={<SignInUp />} />
         <Route path='/sign_in' element={<SignIn />} />
         <Route path='/menu' element={<HomePage cart={cart} handleAddToCart={handleAddToCart} searchQuery={searchQuery} setSearchQuery={setSearchQuery} italianFoods={italianFoods} handleSearch = {handleSearch}/>} />
-        <Route path='/cart' element={<MyOrder setCart={setCart} cart={cart} />} />
+        <Route path='/cart' element={<MyOrder totalAmount={totalAmount} setCart={setCart} cart={cart} />} />
         <Route path='/tracking' element={<TrackingPage />} />
         <Route path='/payment' element={<PaymentPage />} />
       </Routes>
