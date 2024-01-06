@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-function MyOrder({ cart, setCart, totalAmount }) {
+function MyOrder({ cart, setCart, totalAmount, removeFromCart}) {
 
   return (
     <div className='selected-cart'>
@@ -30,7 +30,7 @@ function MyOrder({ cart, setCart, totalAmount }) {
                     <td>{item.product.name}</td>
                     <td>{item.product.description}</td>
                     <td>{item.product.price}</td>
-                    <td>
+                    <td className='quantity'>
 
                       <button onClick={() => {
                         setCart((prevdata) => {
@@ -62,7 +62,7 @@ function MyOrder({ cart, setCart, totalAmount }) {
                       </button>
                     </td>
                     <td>
-                      <button>
+                      <button onClick={() => removeFromCart(item.product)}>
                         Remove Item
                       </button>
                     </td>

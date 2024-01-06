@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation} from 'react-router-dom';
 import * as TfiIcons from 'react-icons/tfi';
 import * as MdIcons from 'react-icons/md';
 import SidebarData from './sidebar';
+import Logout from './Logout';
 import '../App.css';
 
 function NavBar() {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
+
+  
+  
 
   // Get the current location
   const location = useLocation();
@@ -17,6 +21,9 @@ function NavBar() {
 
   // Check if the current route is in the list of excluded routes
   const shouldRenderNavBar = !excludedRoutes.includes(location.pathname);
+
+ 
+
 
   return (
     shouldRenderNavBar && (
@@ -40,9 +47,13 @@ function NavBar() {
                     {item.icon}
                     <span>{item.title}</span>
                   </Link>
+                  
                 </li>
+                
               );
             })}
+            <Logout />
+    
           </ul>
         </nav>
       </div>

@@ -50,6 +50,12 @@ function App() {
   }
 
 
+  const removeFromCart =(cartProduct) => {
+    const updatedCart = cart.filter((item) => item.product.id !== cartProduct.id)
+    setCart(updatedCart)
+  }
+
+
 
 
   useEffect(() => {
@@ -71,7 +77,7 @@ function App() {
         <Route path='/sign_in_up' element={<SignInUp />} />
         <Route path='/sign_in' element={<SignIn />} />
         <Route path='/menu' element={<HomePage cart={cart} handleAddToCart={handleAddToCart} searchQuery={searchQuery} setSearchQuery={setSearchQuery} italianFoods={italianFoods} handleSearch = {handleSearch}/>} />
-        <Route path='/cart' element={<MyOrder totalAmount={totalAmount} setCart={setCart} cart={cart} />} />
+        <Route path='/cart' element={<MyOrder removeFromCart={removeFromCart} totalAmount={totalAmount} setCart={setCart} cart={cart} />} />
         <Route path='/tracking' element={<TrackingPage />} />
         <Route path='/payment' element={<PaymentPage />} />
       </Routes>

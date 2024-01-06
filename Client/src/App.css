@@ -423,8 +423,10 @@ button:hover {
 } 
 
 
+
+
 .table-container{
-  width: 60%;
+  width: 80%;
   margin: auto;
 }
 
@@ -435,8 +437,8 @@ button:hover {
 
 .table th, td{
   border: 1px solid black;
-  padding: 10px;
-  text-align: left;
+  padding: 5px;
+  text-align: center;
 }
 .table th{
   background-color: #3a5b3b;
@@ -457,10 +459,15 @@ button:hover {
 .table-img{
   width: 125px;
   height: 125px;
+  border-radius: 10px;
 }
 
 .tr-amount{
   border: 1px solid black;
+}
+
+.quantity button{
+  margin: 5px;
 }
 
 .amount{
